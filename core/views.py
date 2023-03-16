@@ -16,4 +16,9 @@ def ProductList(request):
         _type_: _description_
     """
     data = Products.objects.all()
-    return Response(data.values())
+    final = {
+        'res': 'Success',
+        'data': data.values()
+    }
+    
+    return Response(final)
