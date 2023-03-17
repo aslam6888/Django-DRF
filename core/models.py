@@ -7,3 +7,5 @@ class Products(models.Model):
     price = models.FloatField()
     inventory = models.IntegerField()
     
+    def offer_price(self):
+        return self.price + self.inventory
