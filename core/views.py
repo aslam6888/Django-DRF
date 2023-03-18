@@ -34,3 +34,7 @@ class ProductApi(viewsets.ModelViewSet):
     queryset = Products.objects.all()
     serializer_class = ProductSerializer
     #permission_classes = [permissions.IsAuthenticated]
+
+
+def main(request):
+    return render(request, 'main.html')
